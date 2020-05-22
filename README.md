@@ -11,11 +11,11 @@ Own fft algorithm based on lookup tables and cooley tukey
 - You don't need to change N in the arduino project! It'll be calculated out of Signal.h You must change N only in "fourier_setup.py".
 - The time expenditure for fft algorithm depends on the sample rate N and the accuracy in the for-loop of the "rootdiv()" in "Func.h".
   In "fft()" you can choose between "rootdiv()",based on heron algorithm, and sqrt() standard function.
-- The harmonics become mirrored around the half of sample rate times fundamental frequency "f" with respect to Nyquist–Shannon sampling theorem
+- The harmonics become mirrored around the half of sample rate times fundamental frequency "f" with respect to Nyquist–Shannon sampling theorem. Only the offset or direct current part "f[0]" is unique.
 
 # How to use?
 
-Step 0: Copy all files and paste in "FFT_Test"-folder. Otherwise Arduino IDE will show warning after start.
+Step 0: Rename folder "fft_lu_ct-master" in "FFT_Test"-folder. Otherwise Arduino IDE will show warning after start.
 
 Step 1: Start "fourier_setup.py", create your testsignal "y". "n" must be an integer multiple of the sample rate "N" e.g. n = 1024, N = 128. 
 
@@ -32,4 +32,4 @@ Step 4: Start the Arduino IDE with "FFT_Test.ino". Restart Arduino IDE everty ti
 
 Step 5: Choose Controller Board and flash the project. In my case ESP32 Dev Module.
 
-Step 6: Open Serial Monitor. The harmonics of the test signal "x" from "Signal.h" will be shown.
+Step 6: Open Serial Monitor with 115200 Baud/s. The harmonics of the test signal "x" from "Signal.h" will be shown.
