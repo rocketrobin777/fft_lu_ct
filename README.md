@@ -15,6 +15,8 @@ Own fft algorithm based on lookup tables and cooley tukey
 
 # How to use?
 
+Step 0: Copy all files and paste in "FFT_Test"-folder. Otherwise Arduiono IDE will show warning after start.
+
 Step 1: Start "fourier_setup.py", create your testsignal "y". "n" must be an integer multiple of the sample rate "N" e.g. n = 1024, N = 128. 
 
 Step 2: You can choose between 
