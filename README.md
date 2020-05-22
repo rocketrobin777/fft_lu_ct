@@ -8,10 +8,10 @@ Own fft algorithm based on lookup tables and cooley tukey
 - I used Arduino IDE to create .ino and .h files, where some .h files will be written automatically out of Python script. Follow the "How to use" steps to understand how it works.
 - As µC I used ESP32 because it's able to use 32Bit floating point unit (FPU) and it's pretty cheap, with connectivity to Wifi and so on.
 - The highest sample rate I was able to perform was N = 128. Feel free to test any lower sample rates with N = 2^k, because the fft algorithm needs sample rates with power of 2 e.g. N = 64, N = 32, .... If you're able to run higher sample rates than N = 128, pls let me know ;-). The lookup table in Lookup.h is prepared for N <= 1024.
-- You don't need to change N in the arduino project! It'll be calculated out of Signal.h You must change N only in fourier_setup.py
-- The time expenditure for fft algorithm depends on the sample rate N and the accuracy in the for-loop of the rootdiv() in Func.h.
-  In fft() you can choose between rootdiv(),based on heron algorithm, and sqrt() standard function.
-- The harmonics become mirrored around the half of sample rate times fundamental frequency with respect to Nyquist–Shannon sampling theorem
+- You don't need to change N in the arduino project! It'll be calculated out of Signal.h You must change N only in "fourier_setup.py".
+- The time expenditure for fft algorithm depends on the sample rate N and the accuracy in the for-loop of the "rootdiv()" in "Func.h".
+  In "fft()" you can choose between "rootdiv()",based on heron algorithm, and sqrt() standard function.
+- The harmonics become mirrored around the half of sample rate times fundamental frequency "f" with respect to Nyquist–Shannon sampling theorem
 
 # How to use?
 
