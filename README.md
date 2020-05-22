@@ -3,7 +3,7 @@ Own fft algorithm based on lookup tables and cooley tukey
 
 # comments
 
-- This example is an excerpt from my project for my doctoral thesis. In my thesis I measure net voltage and current consumption with analog readings.... Here you can use my fft algorithm with a simple test environment based on Python script and microcontrollers supported by Arduino IDE.
+- This example is an excerpt from my project for my doctoral thesis. In my thesis I measure net voltage and current consumption with analog readings.... Here you can use my fft algorithm with a simple test environment based on Python script and microcontrollers (µCs) supported by Arduino IDE.
 - I used Python 3.8 on Spyder IDE to create the .py files. Older versions of Python 3.x will probably work as well.
 - I used Arduino IDE to create .ino and .h files, where some .h files will be written automatically out of Python script. Follow the "How to use" steps to understand how it works.
 - As µC I used ESP32 because it's able to use 32Bit floating point unit (FPU) and it's pretty cheap, with connectivity to Wifi and so on.
