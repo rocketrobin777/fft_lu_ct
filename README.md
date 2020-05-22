@@ -26,7 +26,7 @@ Step 2: You can choose between
   - dft_p (DFT based on polar coordinates),
   to compare how the different methods perform.
  
-Step 3: A testsignal will be create automatically in "Signal.h", which is part of the Arduino project.
+Step 3: A test signal will be created automatically in "Signal.h", which is part of the Arduino project.
 
 Step 4: Start the Arduino IDE with "FFT_Test.ino". Restart Arduino IDE everty time after you changed "Signal.h" to take effect!
 
